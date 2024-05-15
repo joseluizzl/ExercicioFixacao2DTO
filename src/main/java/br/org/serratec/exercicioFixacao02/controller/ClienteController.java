@@ -16,8 +16,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.org.serratec.exercicioFixacao02.dto.ClienteDto;
-import br.org.serratec.exercicioFixacao02.model.Cliente;
 import br.org.serratec.exercicioFixacao02.service.ClienteService;
+import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/clientes")
@@ -31,8 +31,18 @@ public class ClienteController {
 		return ResponseEntity.ok(servico.obterTodosOsClientes());
 	}
 	
+	@GetMapping("/nascimento")
+	public ResponseEntity<List<ClienteDto>> obterPorNascimento(@RequestBody String nascimento) {
+		return ResponseEntity.ok(servico.obterPorNascimento(nascimento));
+	}
+	
+	@GetMapping("/nome")
+	public ResponseEntity<List<ClienteDto>> obterClientePorNome(@RequestBody String nome) {
+		return ResponseEntity.ok(servico.obterClientePorNome(nome));
+	}
+	
 	@PostMapping
-	public ResponseEntity<ClienteDto> cadastrarCliente(@RequestBody ClienteDto cliente) {		
+	public ResponseEntity<ClienteDto> cadastrarCliente(@Valid @RequestBody ClienteDto cliente) {		
 		return new ResponseEntity<ClienteDto>(servico.cadastrarCliente(cliente), HttpStatus.CREATED);
 	}
 	

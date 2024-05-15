@@ -22,19 +22,19 @@ public class Cliente {
 	private String cpf;
 	@Column(length = 50)
 	private String email;
-	private LocalDate data_nascimento;
+	private LocalDate dataNascimento;
 	
 	public Cliente() {
 		
 	}
 	
-	public Cliente(Long id, String nome, String cpf, String email, LocalDate data_nascimento) {
+	public Cliente(Long id, String nome, String cpf, String email, LocalDate dataNascimento) {
 		super();
 		this.id = id;
 		this.nome = nome;
 		this.cpf = cpf;
 		this.email = email;
-		this.data_nascimento = data_nascimento;
+		this.dataNascimento = dataNascimento;
 	}
 
 	public Long getId() {
@@ -61,16 +61,16 @@ public class Cliente {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public LocalDate getData_nascimento() {
-		return data_nascimento;
+	public LocalDate getDataNascimento() {
+		return dataNascimento;
 	}
-	public void setData_nascimento(LocalDate data_nascimento) {
-		this.data_nascimento = data_nascimento;
+	public void setDataNascimento(LocalDate dataNascimento) {
+		this.dataNascimento = dataNascimento;
 	}
 
 	public ClienteDto toDto() {
 		return new ClienteDto(this.id, this.nome, this.cpf, this.email,
-				this.data_nascimento);
+				this.dataNascimento);
 	}
 	
 }

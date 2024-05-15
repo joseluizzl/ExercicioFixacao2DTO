@@ -1,4 +1,6 @@
 br/org/serratec/exercicioFixacao02/model/Cliente.class
 br/org/serratec/exercicioFixacao02/repository/ClienteRepository.class
+br/org/serratec/exercicioFixacao02/service/ClienteService.class
+br/org/serratec/exercicioFixacao02/dto/ClienteDto.class
 br/org/serratec/exercicioFixacao02/controller/ClienteController.class
 br/org/serratec/exercicioFixacao02/ExercicioFixacao02Application.class

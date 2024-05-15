@@ -1,10 +1,12 @@
 package br.org.serratec.exercicioFixacao02.service;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import br.org.serratec.exercicioFixacao02.dto.ClienteDto;
 import br.org.serratec.exercicioFixacao02.model.Cliente;
@@ -19,7 +21,7 @@ public class ClienteService {
 	public List<ClienteDto> obterTodosOsClientes() {
 		return repositorio.findAll().stream()
 				.map(c -> new ClienteDto(c.getId(), c.getNome(),
-						c.getCpf(), c.getEmail(), c.getData_nascimento()))
+						c.getCpf(), c.getEmail(), c.getDataNascimento()))
 				.toList();
 	}
 	
@@ -54,6 +56,19 @@ public class ClienteService {
 		 repositorio.deleteById(id);
 		 return true;
 	}
+
+	public List<ClienteDto> obterPorNascimento(@RequestBody String nascimento) {
+		return repositorio.findByDataNascimentoAfter(LocalDate.parse(nascimento)).stream()
+				.map(c -> new ClienteDto(c.getId(), c.getNome(),
+						c.getCpf(), c.getEmail(), c.getDataNascimento()))
+				.toList();
+	}
+	
+	public List<ClienteDto>obterClientePorNome(String nome) {
+		return repositorio.findByNomeContainingIgnoreCase(nome).stream()
+				.map(c -> new ClienteDto(c.getId(),c.getNome(),c.getCpf(),c.getEmail(),c.getDataNascimento()))
+				.toList();
+}
 	
 	
 	

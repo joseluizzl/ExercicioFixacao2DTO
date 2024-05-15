@@ -1,4 +1,6 @@
-/home/administrador/Área de Trabalho/Serratec/Desenvolvimento de API Restful/ExercicioFixacao02/exercicioFixacao02/src/main/java/br/org/serratec/exercicioFixacao02/controller/ClienteController.java
-/home/administrador/Área de Trabalho/Serratec/Desenvolvimento de API Restful/ExercicioFixacao02/exercicioFixacao02/src/main/java/br/org/serratec/exercicioFixacao02/repository/ClienteRepository.java
-/home/administrador/Área de Trabalho/Serratec/Desenvolvimento de API Restful/ExercicioFixacao02/exercicioFixacao02/src/main/java/br/org/serratec/exercicioFixacao02/ExercicioFixacao02Application.java
-/home/administrador/Área de Trabalho/Serratec/Desenvolvimento de API Restful/ExercicioFixacao02/exercicioFixacao02/src/main/java/br/org/serratec/exercicioFixacao02/model/Cliente.java
+/home/administrador/Área de Trabalho/Serratec/Desenvolvimento de API Restful/exercicioFixacao02 10-05-2024/src/main/java/br/org/serratec/exercicioFixacao02/controller/ClienteController.java
+/home/administrador/Área de Trabalho/Serratec/Desenvolvimento de API Restful/exercicioFixacao02 10-05-2024/src/main/java/br/org/serratec/exercicioFixacao02/repository/ClienteRepository.java
+/home/administrador/Área de Trabalho/Serratec/Desenvolvimento de API Restful/exercicioFixacao02 10-05-2024/src/main/java/br/org/serratec/exercicioFixacao02/model/Cliente.java
+/home/administrador/Área de Trabalho/Serratec/Desenvolvimento de API Restful/exercicioFixacao02 10-05-2024/src/main/java/br/org/serratec/exercicioFixacao02/ExercicioFixacao02Application.java
+/home/administrador/Área de Trabalho/Serratec/Desenvolvimento de API Restful/exercicioFixacao02 10-05-2024/src/main/java/br/org/serratec/exercicioFixacao02/dto/ClienteDto.java
+/home/administrador/Área de Trabalho/Serratec/Desenvolvimento de API Restful/exercicioFixacao02 10-05-2024/src/main/java/br/org/serratec/exercicioFixacao02/service/ClienteService.java
